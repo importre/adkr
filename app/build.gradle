@@ -6,7 +6,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "adkr.importre.github.io.adkr"
+        applicationId "io.github.importre.adkr"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
