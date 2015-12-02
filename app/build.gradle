@@ -14,6 +14,9 @@ buildscript {
     }
 }
 
+def props = new Properties()
+props.load(new FileInputStream(file('../local.properties')))
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
@@ -27,6 +30,10 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "0.0.1"
+
+        buildConfigField "String", "CLIENT_ID", "\"${props.getProperty("client_id", "")}\""
+        buildConfigField "String", "REDIRECT_URL", "\"${props.getProperty("redirect_url", "")}\""
+        buildConfigField "String", "OAUTH_URL", "\"${props.getProperty("oauth_url", "")}\""
     }
 
     buildTypes {
