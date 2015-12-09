@@ -8,7 +8,7 @@ import io.github.importre.adkr.BuildConfig
 import io.github.importre.adkr.R
 import io.github.importre.adkr.user.UserActivity
 import io.github.importre.adkr.util.PrefUtils
-import kotlinx.android.synthetic.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class IntroActivity : BaseActivity(), IntroView {
 

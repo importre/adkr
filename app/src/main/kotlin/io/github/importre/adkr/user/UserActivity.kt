@@ -9,7 +9,7 @@ import io.github.importre.adkr.api.common.Result
 import io.github.importre.adkr.api.common.View
 import io.github.importre.adkr.api.recent.RecentResult
 import io.github.importre.adkr.api.user.UserResult
-import kotlinx.android.synthetic.activity_user.*
+import kotlinx.android.synthetic.main.activity_user.*
 import javax.inject.Inject
 
 class UserActivity : BaseActivity(), View {

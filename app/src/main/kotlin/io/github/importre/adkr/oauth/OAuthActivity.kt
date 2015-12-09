@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import io.github.importre.adkr.R
-import kotlinx.android.synthetic.activity_oauth.*
+import kotlinx.android.synthetic.main.activity_oauth.*
 
 class OAuthActivity : AppCompatActivity(), OAuthView {
 
@@ -47,7 +47,9 @@ class OAuthActivity : AppCompatActivity(), OAuthView {
             }
         })
 
-        var url = "$oauthUrl?client_id=$clientId&redirect_uri=$redirectUrl&response_type=token"
+        var scopes = arrayOf("basic", "public_content",
+                "follower_list", "comments", "relationships", "likes")
+        var url = "$oauthUrl?client_id=$clientId&redirect_uri=$redirectUrl&response_type=token&scope=${scopes.joinToString("+")}"
         webview.loadUrl(url)
     }
 
